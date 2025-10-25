@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tech Support Pakistan — Contact</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+
+<header>
+  <div class="brand">Tech Support Pakistan</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="review.html">Review Us</a>
+  </nav>
+</header>
+
+<main class="container">
+  <h1>Contact Us</h1>
+  <p style="color:var(--muted)">Get in touch for quotes, on-site support, remote troubleshooting or equipment supply.</p>
+  <div style="display:grid;grid-template-columns:1fr 320px;gap:20px;margin-top:18px;">
+    <div class="card">
+      <form onsubmit="event.preventDefault(); alert('Thank you! We will contact you soon (demo).'); this.reset();">
+        <label>Name</label><br>
+        <input required name="name" placeholder="Your full name"><br><br>
+        <label>Phone or Email</label><br>
+        <input required name="contact" placeholder="03XXXXXXXXX or you@mail.com"><br><br>
+        <label>Message</label><br>
+        <textarea name="message" rows="6" placeholder="Describe your issue or equipment requirement"></textarea><br><br>
+        <button class="btn" type="submit">Send Message</button>
+      </form>
+    </div>
+    <div>
+      <div class="card">
+        <strong>Office</strong>
+        <p style="color:var(--muted)">Karachi, Pakistan</p>
+        <p><strong>Phone:</strong> <a href="tel:+923112036265">0311-2036265</a></p>
+        <p><strong>Email:</strong> <a href="mailto:nomanghanchi87@gmail.com">nomanghanchi87@gmail.com</a></p>
+        <p><strong>Hours:</strong> Mon–Sat, 9:00–18:00</p>
+      </div>
+      <div class="card" style="margin-top:14px">
+        <strong>We Also Provide IT Equipment</strong>
+        <p style="color:var(--muted)">Including laptops, printers, routers, and CCTV setups.</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">📞 0311-2036265  |  ✉️ nomanghanchi87@gmail.com<br>© 2025 Tech Support Pakistan — All Rights Reserved</footer>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Submit & Review Us - Tech Support Pakistan</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+
+<header>
+  <div class="brand">Tech Support Pakistan</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="review.html">Review Us</a>
+  </nav>
+</header>
+
+<main class="container">
+  <h1>Share Your Experience</h1>
+  <p style="color:var(--muted)">We value your feedback! Your review helps us improve and continue providing top-quality IT support and equipment services across Pakistan and internationally.</p>
+
+  <section class="card" style="margin-top:18px">
+    <h2>Submit Your Review</h2>
+    <form id="reviewForm">
+      <label for="name">Full Name</label><br>
+      <input id="name" name="name" type="text" placeholder="Your full name" required style="margin-bottom:8px"><br>
+      <label for="email">Email (optional)</label><br>
+      <input id="email" name="email" type="email" placeholder="you@example.com" style="margin-bottom:8px"><br>
+      <label for="rating">Rating</label><br>
+      <select id="rating" name="rating" style="margin-bottom:8px">
+        <option value="5">★★★★★ (5)</option>
+        <option value="4">★★★★ (4)</option>
+        <option value="3">★★★ (3)</option>
+        <option value="2">★★ (2)</option>
+        <option value="1">★ (1)</option>
+      </select><br>
+      <label for="review">Your Review</label><br>
+      <textarea id="review" name="review" rows="4" placeholder="Write your review here..." required style="margin-bottom:8px"></textarea><br>
+      <button class="btn" type="submit">Submit Review</button>
+    </form>
+  </section>
+
+  <section style="margin-top:28px">
+    <h2>Recent Reviews</h2>
+    <div id="reviews" class="grid" style="margin-top:12px">
+      <div class="card"><strong>Ali R.</strong><p style="color:var(--muted)">"Excellent IT support! They fixed our office Wi-Fi and CCTV within hours."</p></div>
+      <div class="card"><strong>Sana K.</strong><p style="color:var(--muted)">"Professional and polite staff. Highly recommended!"</p></div>
+      <div class="card"><strong>Omar L.</strong><p style="color:var(--muted)">"Affordable services and reliable technical team."</p></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">📞 0311-2036265  |  ✉️ nomanghanchi87@gmail.com<br>© 2025 Tech Support Pakistan — All Rights Reserved</footer>
+
+
+<script>
+// Demo client-side add review (no backend). Reviews will not persist after refresh.
+document.getElementById('reviewForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const name = document.getElementById('name').value || 'Anonymous';
+  const rating = document.getElementById('rating').value;
+  const reviewText = document.getElementById('review').value;
+  const container = document.getElementById('reviews');
+  const card = document.createElement('div');
+  card.className = 'card';
+  card.innerHTML = '<strong>' + name + '</strong><p style="color:var(--muted)">' + 'Rating: ' + '★'.repeat(rating) + '<br>"' + reviewText + '"</p>';
+  container.insertBefore(card, container.firstChild);
+  alert('Thank you for your review! (saved locally for this session)');
+  this.reset();
+});
+</script>
+
+</body>
+</html>
